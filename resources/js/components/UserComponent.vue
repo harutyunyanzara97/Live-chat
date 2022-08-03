@@ -30,6 +30,7 @@ export default {
                 this.users = this.users.filter(u => {
                     return u.id != user.id
                 });
+                axios.put('/api/user/'+ user.id +'/offline', {});
             });
     }
 }

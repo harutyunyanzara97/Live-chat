@@ -15,6 +15,7 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+                       See  <a href="{{route('chat-dashboard')}}">Chat</a>
                     </div>
                 </div>
             </div>

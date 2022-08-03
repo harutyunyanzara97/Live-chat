@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Events\MessageSend;
+use App\Jobs\SendEmailJob;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller

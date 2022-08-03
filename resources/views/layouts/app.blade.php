@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{asset('css/index.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -19,7 +20,7 @@
         window.Laravel = {!! json_encode([
             'csrfToken'=> csrf_token(),
             'user'=> [
-                'authenticated' => auth()->check(),
+                'authenticated' => Auth::check(),
                 'id' => Auth::check() ? Auth::id() : null,
                 'name' => Auth::check() ? Auth::user()->name : null,
                 ]
